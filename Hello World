@@ -1,0 +1,33 @@
+Print “ Hello World ” using PL SQL.
+
+PROG
+
+DECLARE 
+   m  varchar2(20):= 'Hello, World'; 
+BEGIN 
+   dbms_output.put_line(m); 
+END; 
+/ 
+
+OUTPUT
+
+Hello, World
+
+Statement processed.
+
+0.01 seconds
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
