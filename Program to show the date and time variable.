@@ -1,0 +1,10 @@
+Prog
+
+DECLARE
+    -- Declare a variable of DATE data type
+    current_datetime DATE := SYSDATE;
+BEGIN
+    -- Print the current date and time
+    DBMS_OUTPUT.PUT_LINE('Current Date and Time: ' || TO_CHAR(current_datetime, 'DD-MON-YYYY HH24:MI:SS'));
+END;
+/
