@@ -1,0 +1,58 @@
+Prog
+
+DECLARE
+    -- Number
+    num_var NUMBER := 123;
+    
+    -- Varchar2
+    varchar_var VARCHAR2(50) := 'Hello, PL/SQL!';
+    
+    -- Char
+    char_var CHAR(10) := 'ABC';
+    
+    -- Date
+    date_var DATE := SYSDATE;
+    
+    -- Boolean
+    bool_var BOOLEAN := TRUE;
+    
+    -- Clob
+    clob_var CLOB := 'This is a CLOB';
+    
+    -- BLOB
+    blob_var BLOB;
+    
+BEGIN
+    -- Print Number
+    DBMS_OUTPUT.PUT_LINE('Number Variable: ' || TO_CHAR(num_var));
+
+    -- Print Varchar2
+    DBMS_OUTPUT.PUT_LINE('Varchar2 Variable: ' || varchar_var);
+
+    -- Print Char
+    DBMS_OUTPUT.PUT_LINE('Char Variable: ' || char_var);
+
+    -- Print Date
+    DBMS_OUTPUT.PUT_LINE('Date Variable: ' || TO_CHAR(date_var, 'DD-MON-YYYY HH24:MI:SS'));
+
+    -- Print Boolean
+    DBMS_OUTPUT.PUT_LINE('Boolean Variable: ' || CASE WHEN bool_var THEN 'TRUE' ELSE 'FALSE' END);
+
+    -- Print Clob
+    DBMS_OUTPUT.PUT_LINE('Clob Variable: ' || clob_var);
+
+    -- Print BLOB (Note: BLOB data type does not have a readable representation like CLOB)
+    -- DBMS_OUTPUT.PUT_LINE('Blob Variable: ' || blob_var);
+
+END;
+/
+
+
+OUT
+
+Number Variable: 123
+Varchar2 Variable: Hello, PL/SQL!
+Char Variable: ABC       
+Date Variable: 25-NOV-2023 21:27:54
+Boolean Variable: TRUE
+Clob Variable: This is a CLOB
