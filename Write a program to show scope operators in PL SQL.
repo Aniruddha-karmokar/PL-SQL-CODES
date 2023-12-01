@@ -1,0 +1,20 @@
+Prog
+
+DECLARE
+   NUM1 NUMBER := 25;
+BEGIN
+   dbms_output.put_line('OUTER VARIABLE '||NUM1);
+   DECLARE
+       NUM2 NUMBER := 42;
+   BEGIN
+       dbms_output.put_line('INNER VARIABLE '||NUM2);
+   END;
+END;
+/
+
+Out
+
+OUTER VARIABLE 25
+INNER VARIABLE 42
+
+Statement processed
