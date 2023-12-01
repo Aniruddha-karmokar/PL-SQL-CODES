@@ -1,0 +1,26 @@
+Prog
+create table student(
+sid int not null, 
+name varchar(20) not null,
+address varchar(40),
+primary key(sid)
+);
+
+insert into student values(3, 'Rounak', 'Chennai');
+
+
+DECLARE 
+   ID student.sid%type;
+   Name student.name%type;
+   Add student.address%type;
+BEGIN
+   SELECT sid, name, address INTO ID, Name, Add
+   FROM STUDENT
+   WHERE sid = 1;
+   dbms_output.put_line('The name of the student is '||Name||' who lives in '||Add||' and the id is '||ID||' .');
+END;
+/
+
+Out
+.
+The name of the student is Aniruddha who lives in  Kolkata and the id is 1 .
